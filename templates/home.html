@@ -1,0 +1,249 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet Me</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .section {
+      padding: 1rem;
+      border: 1px solid #ccc;
+      background: #f8f9fa;
+      margin-bottom: 1rem;
+    }
+    .full-height {
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container pt-5">
+    <!-- <h3>Meet Me</h3>     -->
+      
+<div class="container py-4">
+  <div class="row">
+
+    <!-- LEFT COLUMN -->
+    <div class="col-md-4 border-end">
+
+      <!-- Profile Section -->
+      <div class="text-center mb-4">
+        <img src="{% static 'images/me.png' %}"
+             class="rounded-circle mb-4" alt="Profile Photo" style="width:150px; height:150px; object-fit:cover;">
+
+        <h4 class="mb-0">Gomathy Mariappan</h4>
+        <p class="text-muted">Business Intelligence Specialist</p>
+
+        <p><i class="bi bi-geo-alt"></i> Topeka, Kansas, USA</p>
+        <p><i class="bi bi-telephone"></i> +1 785 806 0737</p>
+        <p><a href="https://www.linkedin.com/in/gomathy-mariappan" class="link-primary"><i class="bi bi-linkedin"></i> LinkedIn</a></p>
+      </div>
+
+      <hr>
+
+      <!-- Vertical Pills Menu -->
+      <div class="d-flex align-items-start">
+        <div class="nav flex-column nav-pills w-100"
+             id="v-pills-tab" role="tablist" aria-orientation="vertical">
+
+          <button class="nav-link active" id="v-home-tab"
+                  data-bs-toggle="pill" data-bs-target="#v-home"
+                  type="button" role="tab">Home</button>
+
+          <button class="nav-link" id="v-experience-tab"
+                  data-bs-toggle="pill" data-bs-target="#v-experience"
+                  type="button" role="tab">Experience</button>
+
+          <button class="nav-link" id="v-about-tab"
+                  data-bs-toggle="pill" data-bs-target="#v-about"
+                  type="button" role="tab">About Me</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN (TAB CONTENT) -->
+    <div class="col-md-8">
+      <div class="tab-content" id="v-pills-tabContent">
+
+        <!-- HOME TAB -->
+        <div class="tab-pane fade show active" id="v-home" role="tabpanel">
+          <h4>Professional Summary</h4>
+           <p>Prolific Business Intelligence Specialist with 15+ years of experience across Insurance, Finance, and Telecom domains. Expert in BI, ETL, and Cloud ecosystems with proven success in automating workflows, optimizing data pipelines, and mentoring cross-functional teams. Extensive experience with ETL, Cloud migration, BI tools, and automation using Python and PowerShell. </p>
+           <p>Proven team leader with a track record of driving results and motivating teams, who has consistently extended beyond current job responsibilities. Ready and eager to take on greater responsibility and accountability to contribute at a higher level. Adept at driving process improvements and leveraging Generative AI tools such as ChatGPT, Cursor, and Amazon Q to enhance productivity.
+		  </p>          
+          <hr>
+
+          <h4>Application Experience</h4>
+          <ul>
+            <li>Languages: Python, PowerShell, C#, VB.NET, SQL, PL/SQL, T-SQL</li>
+            <li>ETL / BI Tools: SSIS, Informatica, Pentaho, Teradata, Power BI, Tableau, OWB</li>
+            <li>Cloud & DevOps: AWS (S3, Lambda, EC2, FSx, EBS, CloudWatch, CloudFront), Git, CI/CD, JIRA, Confluence</li>
+            <li>Frameworks & Web: .NET Core, MVC, LINQ, Web API, Angular 8/12, HTML, CSS, JavaScript, Django</li>
+            <li>Automation & AI: ChatGPT, Cursor, Power Automate, Amazon Q, Datadog</li>
+            <li>Databases: Oracle, SQL Server, MySQL, MongoDB</li>
+          </ul>
+
+          <hr>
+
+          <h4>Career Highlights</h4>
+          <ul>
+            <li>Delivering end-to-end support for three enterprise applications, ensuring high availability, handling escalations, and resolving Sev 1 & 2 issues by driving the teams towards permanent resolutions.</li>
+            <li>Engineered PowerShell/Windows Form automation that reduced by 400+ monthly manual correspondence tasks to minutes.</li>
+            <li>Developed and deployed Datadog Synthetic Monitoring for proactive service availability tracking.</li>
+            <li>Led design modernization and migration of ETL jobs, improving cycle performance by 3x.</li>
+            <li>Pioneered a policy-page retrigger automation eliminating 3.5 hours of daily manual effort.</li>
+            <li>Spearheaded cross-team collaboration for ADHOC policy summary project, formalized for enterprise adoption.</li>
+            <li>Contributed to AWS migration projects ensuring stability, optimized resources, and improved SLAs.</li>
+          </ul>
+
+          <h4>Education</h4>
+          <ul>
+            <li>Bachelor of Engineering</li>
+          </ul>
+        </div>
+
+        <!-- EXPERIENCE TAB -->
+        <div class="tab-pane fade" id="v-experience" role="tabpanel">
+          <h4 class="mb-3">Experience</h4>
+
+  <!-- Experience Item 1 -->
+  <div class="experience-item mb-4 pb-3 border-bottom">
+    <div class="d-flex justify-content-between align-items-start">
+      <div>
+        <h5 class="mb-1">Domain Lead</h5>
+        <p class="text-muted mb-2">Zinnia • Topeka, USA</p>
+      </div>
+      <span class="text-muted fw-semibold">2015 – Present</span>
+    </div>
+
+    <ul class="mt-2">
+        <li>Provide end-to-end support for enterprise-grade applications, ensuring high availability and performance, while maintaining clear and timely communication with CRMs and clients to manage expectations effectively.</li>
+        <li>One of those being a next-generation correspondence application leveraging Kafka, MongoDB, Go, and Java services, focusing on its integration across multiple systems. I have identified and communicated root cause issues, actively working on their resolution to ensure system stability and performance. Additionally, I contributed to the implementation process and shared my expertise in the Life & Annuities (L&A) industry to drive project success.</li>
+        <li>Engineered mitigations for multiple Sev 1/2 incidents using Python, PowerShell, and Cursor AI to ensure rapid issue resolution.</li>
+        <li>Collaborating with Business Analysts, Developers, and cross-functional teams to support upgrades, enhancements, and environment maintenance. This teamwork ensures smooth project delivery and system stability.</li>
+        <li>Internal management reports misidentified issues in Correspondence. It was my idea to refine the reports, shifting focus to root causes and improving accuracy and relevance. This initiative paved the way for corrected BI reports that provide truthful insights, enabling better management decisions.</li>
+        <li>Led cross-functional efforts to resolve policy page regeneration issues for policies over one year old by identifying code limitations and collaborating with multiple teams. Successfully proposed and secured client approval for an ADHOC policy page summary, initiating a standardized template that is now being formalized as a change request for broader adoption.</li>
+        <li>Delivered enhanced support by going beyond standard procedures to analyze service requests from the user’s perspective. This approach resulted in faster and more accurate issue resolution.</li>
+        <li>Developed and deployed Datadog Synthetic Monitoring for a third-party application to ensure service availability. Created alerts to notify the team promptly in case of service unavailability.</li>
+        <li>Continuously observed and collaborated with Product and Development teams to migrate control check logic from downstream systems to the Source of Record (SOR). This effort aims to improve data integrity throughout the entire data flow from source to consumers.</li>
+        <li>Designed a regular report to monitor Correspondence file delivery status. This report enables Management, Internal Print Center, and ICT teams to effectively track progress and performance.</li>
+        <li>Actively collaborated with ICT, sharing equal responsibility to resolve critical issues comprehensively and sustainably. This partnership ensured timely and effective problem-solving.</li>
+        <li>I identified bottlenecks and reduced ETL execution times, helping meet SLAs for multiple clients. Provided permanent fixes for recurring issues, minimizing downtime and improving reliability.</li>
+        <li>Assisted in onboarding multiple new clients for applications Correspondence, Interfaces, Data services, ETP, and Unified Web. This supported smooth integration and adoption of systems.</li>
+        <li>Collaborated effectively with 3rd party DTCC and Zinnia’s network team to update the SSL certificate for ETP’s attachment service. This secured communications and maintained service integrity.</li>
+        <li>Assisted with unified design on UC4 plans and created a base deployment document for SOI designs. This standardized processes and improved deployment consistency.</li>
+        <li>Migrated Interfaces/Data Services clients to FSx server and deployed Automic jobs. Configured two host application servers to invoke .NET applications based on availability, ensuring high availability.</li>
+        <li>Worked with Automic’s SYNC and QUEUE features to control server instance counts. This prevented memory overutilization, deadlocks, and server overload.</li>
+        <li>Assisted with Se2’s audit process for Interfaces applications in collaboration with EY. This ensured compliance and thorough documentation.</li>
+        <li>Automated 400+ monthly correspondence requests with PowerShell, cutting processing time from hours to minutes, and developed a C# self-service tool that eliminated 50+ monthly JIRA tickets.</li>
+        <li>Developed a C# console app to validate XML against XSD, simplifying debugging with precise error messages for ETP/Data Services, and automated 20 month-end SLA reports, reducing manual effort from 10 person-days to 8 hours monthly.</li>
+        <li>Resolved critical memory issues and modernized legacy systems by upgrading Angular, DLLs, and migrating Automic jobs to newer servers, enhancing stability, performance, and user experience.</li>
+        <li>ETP Application is time sensitive as it processes eApplications and payment files. Added numerous control checks and alerts to enable the production support team to fix issues on the same day, preventing client incidents.
+            <ul>
+                <li>Lists outstanding files not processed.</li>
+                <li>Lists failed transactions for tracking and resolution.</li>
+                <li>Lists incomplete jobs due to SYNC issues in Automic.</li>
+            </ul>
+        </li>
+        <li>Developed a C# console app using CAML Query to automate contract access and trigger settings in SharePoint 2010 and the Transaction system, saving 3.5 hours of manual work monthly. Enhanced the app with data validation and custom error messages, enabling faster issue resolution and reducing incident volume for Interfaces.</li>
+        <li>Pioneered an ADHOC Automic process for Data Services to automate the regeneration of correspondence, especially anniversaries. The process generates, transforms, validates, and delivers text files for multiple clients, streamlining printing and mailing.</li>
+        <li>Created extensive internal documentation in Confluence and OneNote, supporting smoother onboarding and effective knowledge transfer among colleagues.</li>
+        <li>Trained new resources on daily tasks, applications, and client processes to ensure quick ramp-up, and served as a technical interviewer to support hiring.</li>
+    </ul>
+  </div>
+
+  <!-- Experience Item 2 -->
+  <div class="experience-item mb-4 pb-3 border-bottom">
+    <div class="d-flex justify-content-between align-items-start">
+      <div>
+        <h5 class="mb-1">Full Stack Developer</h5>
+        <p class="text-muted mb-2">Zinnia</p>
+      </div>
+      <span class="text-muted fw-semibold">2015 – 2019</span>
+    </div>
+
+    <ul class="mt-2">
+      <li>Redesigned the Client Tool DPU data load process, cutting processing time by two-thirds, and implemented data control checks with automated business reports to ensure daily data integrity and improve reporting accuracy.</li>
+      <li>Experienced in developing web applications using VB.NET, .NET Core, Angular (6, 8, 12), Web API, LINQ, HTML, CSS, JavaScript, and XSLT, supporting both front-end and back-end development while enhancing performance and user experience.</li>
+      <li>Migrated code repositories from TFS to DevOps CI/CD pipelines using Visual Studio Code and GitHub, streamlining development and deployment workflows. Also migrated code from Windows Server 2003 to 2019 via lift-and-shift, modernizing systems and enhancing infrastructure stability.</li>      
+    </ul>
+  </div>
+
+    <!-- Experience Item 3 -->
+  <div class="experience-item mb-4 pb-3 border-bottom">
+    <div class="d-flex justify-content-between align-items-start">
+      <div>
+        <h5 class="mb-1">Support Analyst</h5>
+        <p class="text-muted mb-2">eReceivables</p>
+      </div>
+      <span class="text-muted fw-semibold">2013 – 2014</span>
+    </div>
+
+    <ul class="mt-2">
+      <li>Monitored daily batch jobs ensuring SLA adherence for eReceivables application.</li>
+      <li>Managed incidents and coordinated resolutions, earning client recognition for reliability.</li>
+      <li>Successfully migrated application from UNIX to LINUX 6.4, achieving improved service delivery.</li>
+      <li>Collaborated effectively across systems ensuring data accuracy and operational consistency.</li>
+    </ul>
+  </div>
+
+    <!-- Experience Item 4 -->
+  <div class="experience-item mb-4 pb-3 border-bottom">
+    <div class="d-flex justify-content-between align-items-start">
+      <div>
+        <h5 class="mb-1">Developer</h5>
+        <p class="text-muted mb-2">NTT Data</p>
+      </div>
+      <span class="text-muted fw-semibold">2012 – 2013</span>
+    </div>
+
+    <ul class="mt-2">
+        <li>Developed ETL projects using Informatica PowerCenter and SQL Server for Enterprise Data Warehouse systems.</li>
+        <li>Created a web-based ETL Code Review Tool using HTML and jQuery for improved code quality oversight.</li>
+        <li>Documented data integration models and supported cloud environment setup for BI tools during early adoption phase.</li>
+        <li>Deployed and delivered a Business Intelligence environment during the initial phase of cloud adoption, enabling the organization to share insights and facilitate learning.</li>
+    </ul>
+  </div>
+
+  <!-- Experience Item 5 -->
+  <div class="experience-item mb-4 pb-3 border-bottom">
+    <div class="d-flex justify-content-between align-items-start">
+      <div>
+        <h5 class="mb-1">Developer</h5>
+        <p class="text-muted mb-2">Meteor</p>
+      </div>
+      <span class="text-muted fw-semibold">2010 – 2012</span>
+    </div>
+
+    <ul class="mt-2">
+        <li>Gathered business requirements and collaborated with clients on Low-Level Design documents to define implementation approaches.</li> 
+        <li>Designed and developed ETL processes following industry standards and best practices to optimize data loading across multiple target systems.</li>
+        <li>Engineered and deployed utilities that minimize manual intervention in projects, significantly reducing repetitive manual work.</li>
+        <li>Reduced execution time of scripts from 3–4 hours to under 1 hour through optimization.</li>
+        <li>Automated testing processes with PL/SQL, improving QA efficiency and traceability.</li>
+        <li>Mentored new hires, improved onboarding, and acted as technical interviewer for new recruits.</li>
+        <li>Proposed and deployed Pentaho and Teradata prototypes for client migration consideration.</li>
+        <li>Implemented production UNIX shell scripts and automated environment refresh via scheduled jobs.</li>
+    </ul>
+  </div>
+ </div>
+
+        <!-- ABOUT TAB -->
+        <div class="tab-pane fade" id="v-about" role="tabpanel">
+          <h4>About Me</h4>
+          <p>I am a versatile engineer passionate about developing applications that improve lives. I leverage my communication skills to influence stakeholders and bring proposals to the table, addressing identified bugs and system limitations. By collaborating effectively with cross-functional teams, I help implement solutions that enhance user experience and system performance. I continuously seek opportunities to innovate, learn, and contribute to projects that create meaningful impact.</p>
+          <p>Outside of work, I am a voracious reader of fantasy, adventure, and technical books, a nature enthusiast who enjoys walking at least five miles a day, and a passionate photographer. These personal pursuits fuel my creativity, curiosity, and attention to detail, which I carry into both my professional and personal endeavors.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+</body>
+</html>
