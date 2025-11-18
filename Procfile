@@ -1,1 +1,1 @@
-web: gunicorn gomssite.wsgi:application
+web: gunicorn meetgomathy.wsgi:application
