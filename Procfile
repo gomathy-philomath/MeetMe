@@ -1,0 +1,1 @@
+web: gunicorn gomssite.wsgi:application
