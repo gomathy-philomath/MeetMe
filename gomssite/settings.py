@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-g*z74s$8zfgt3k%!)q_fnl0ux3%z46xyl5tj-46k%e5c3_s(de
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', 'localhost').split(',')
+ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS','*').split(',')
 
 
 # Application definition
@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'gomssite',
+    'gomsprofessional',
+    'gomspersonal',
 ]
 
 MIDDLEWARE = [
