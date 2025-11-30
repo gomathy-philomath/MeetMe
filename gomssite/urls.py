@@ -27,6 +27,7 @@ urlpatterns = [
     path('',views.home, name='home'),
     path ('gomspersonal/',include('gomspersonal.urls')),
     path('log_tab_visit/', views.log_tab_visit, name='log_tab_visit'),
+    path('api/get_logs/', views.get_logs, name='get_logs'),
 ]
 # Serve static + media files in development
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
