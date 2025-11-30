@@ -27,9 +27,26 @@ def get_logs(request):
         logger.error(f"Error reading log file: {e}")
         return JsonResponse({'error': str(e)}, status=500)
 
+def get_client_ip(request):
+    # Check for X-Forwarded-For header (common in proxy environments)
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        # The first IP in the list is usually the real client IP
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        # Fallback to REMOTE_ADDR if no X-Forwarded-For header
+        ip = request.META.get('REMOTE_ADDR')
+    return ip
+
+
 def log_tab_visit(request):
     tab_name = request.GET.get('tab_name', 'Unknown')
-    logger.info(f"Tab '{tab_name}' visited by {request.META.get('REMOTE_ADDR')}")
+    # Get the client IP using the helper function
+    client_ip = get_client_ip(request)
+
+    # Log the visit with the tab name and client IP
+    logger.info(f"Tab '{tab_name}' visited by {client_ip}")
+
     return JsonResponse({'status': 'success'})
 
 def home(request):
