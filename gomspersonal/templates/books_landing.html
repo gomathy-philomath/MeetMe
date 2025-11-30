@@ -1,10 +1,58 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Bookshelf</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Books</title>
+
+  <!-- Link to External CSS -->
+  <link href="{% static 'css/styles_personal.css' %}" rel="stylesheet">
+
 </head>
 <body>
-<h1> My Books and Me</h1>
-<p>Books are integral part of my life, myself that has shaped my life, my thinking, my mindset and I can't talk about me without books.</p>
+
+<div class="container-full">
+
+  <!-- LEFT SIDEBAR -->
+  <div class="sidebar">
+    <h3>Explore</h3>
+    <a href="{% url 'gomspersonal:personal_landing' %}">About Me</a>
+    <a href="{% url 'gomspersonal:photography_landing' %}">My Photography</a>
+    <a href="{% url 'home' %}">Home</a>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content">
+    <h2 class="text-center">📚 My Book Collection</h2>
+
+    <!-- Bootstrap Grid System to Display Books in 3 or 4 Columns -->
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+      {% for item in books %}
+        <div class="col d-flex justify-content-center">
+          <div class="card book-card">
+            <img src="{% static '/' %}{{ item.bookCover }}" alt="{{ item.bookName }}" class="book-cover">
+
+            <div class="card-body">
+              <h5 class="book-title">{{ item.bookName }}</h5>
+              <p class="book-author">by {{ item.bookAuthor }}</p>
+              <p class="book-review">{{ item.bookReview }}</p>
+
+              <button class="btn btn-primary btn-sm mt-2"
+                      data-bs-toggle="modal"
+                      data-bs-target="#bookModal{{ item.id }}">
+                Read More
+              </button>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- Add the Bootstrap JS bundle for the modal functionality -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

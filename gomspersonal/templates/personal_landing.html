@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
+
+  <!-- Link to External CSS -->
+  <link href="{% static 'css/styles_personal.css' %}" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+
+    <!-- LEFT SIDEBAR -->
+    <div class="sidebar">
+      <h3>Explore</h3>
+      <a href="{% url 'gomspersonal:books_landing' %}">My Books</a>
+      <a href="{% url 'gomspersonal:photography_landing' %}">My Photography</a>
+      <a href="{% url 'home' %}">Home</a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="content">
+      <h1>The Person Behind the Lens</h1>
+      <p>
+        I’m someone who finds peace in nature — especially on trails near water. Walking outdoors is my reset button, and capturing those quiet moments through nature photography is one of my greatest joys. I love noticing the small things: reflections on a lake, early spring colors, the glow of sunset, or a path that feels like it’s leading somewhere calm.
+      </p>
+      <p>
+        I enjoy experiences that help me unwind and feel present, whether it’s a relaxing day with my family, exploring places like Cosm or the Gaylord Texan water park, or simply getting lost in a beautiful view. Nature gives me space to breathe, think, and feel grounded.
+      </p>
+      <p>
+        My philosophy is simple:
+      </p>
+      <p>
+        <b>Sometimes you win, sometimes you learn.</b>
+      </p>
+      <p>
+        I try to embrace each moment — good or challenging — as part of the journey.
+      </p>
+      <p>
+        This space is where I share the things that bring me joy, peace, and inspiration.
+      </p>
+      <p>
+        Books are a quiet escape for me — a way to slow down, reflect, and learn something new. I read the same way I walk through nature: with curiosity and intention. I’m drawn to books that teach, inspire, or open my mind to a different perspective. Sometimes it’s a deep, thoughtful read; other times it’s something light that simply brings joy.
+      </p>

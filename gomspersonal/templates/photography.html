@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Photography</title>
+
+  <!-- Link to External CSS -->
+  <link href="{% static 'css/styles_personal.css' %}" rel="stylesheet">
+</head>
+<body>
+
+<div class="container-full">
+
+  <!-- LEFT SIDEBAR -->
+  <div class="sidebar">
+    <h3>Explore</h3>
+    <a href="{% url 'gomspersonal:personal_landing' %}">About Me</a>
+    <a href="{% url 'gomspersonal:books_landing' %}">My Books</a>
+    <a href="{% url 'home' %}">Home</a>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content">
+    <h2 class="text-center">📸 My Photography</h2>
+
+    <!-- Photography Grid: Photos -->
+    <div class="photo-grid">
+      {% for photo in photos %}
+        <div class="col">
+          <div class="card photo-card">
+            <!-- Displaying Image -->
+            <img src="{% static photo.photo %}" alt="{{ photo.photoName }}" class="photo-image">
+
+            <div class="card-body">
+              <p class="photo-location">{{ photo.photoLocation }}</p>
+              <p class="photo-review">{{ photo.photoReview }}</p>
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <p>No photos available.</p>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+
+<!-- Add the Bootstrap JS bundle for the modal functionality -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

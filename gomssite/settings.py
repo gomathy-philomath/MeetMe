@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-g*z74s$8zfgt3k%!)q_fnl0ux3%z46xyl5tj-46k%e5c3_s(de"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS','*').split(',')
 
@@ -129,7 +129,50 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / "media"
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+log_dir = os.path.join(BASE_DIR, 'logs')
+if not os.path.exists(log_dir):
+    os.makedirs(log_dir)
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} | {asctime} | {name} | {message}',
+            'datefmt': '%Y-%m-%d %H:%M:%S',  # Without milliseconds
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs', 'website.log'),
+            'formatter': 'verbose',  # Use the verbose format
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'WARNING',  # Set to 'DEBUG' or 'INFO' if you want more logs
+            'propagate': True,
+        },
+        'visit_logger': {
+            'handlers': ['file'],
+            'level': 'DEBUG',  # This will log your custom visit logs
+            'propagate': False,
+        },
+    },
+}
